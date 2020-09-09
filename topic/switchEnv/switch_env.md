@@ -1,12 +1,8 @@
 ## apiKey
 
 
-
-
 ### config.js
 ```js
-import "define_env.js"
-
 const accessKey = {
   "dev": "{
           }",
@@ -15,6 +11,7 @@ const accessKey = {
 };
 
 const config = "accessKey." + env
+
 ```
 
 ### define_env.js
@@ -28,6 +25,14 @@ const env = "dev";
 job:
   script:
     - sed -i -e "s/'env = \"dev\"'/'env = \"prod\"'/" define_env.js
+
+```
+
+### indes.html
+```html
+<script src="define_env.js"></script>
+<script src="config.js"></script>
+
 
 ```
 
